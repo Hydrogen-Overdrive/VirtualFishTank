@@ -119,6 +119,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7408719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7408722}
+  - component: {fileID: 7408721}
+  m_Layer: 0
+  m_Name: BoidController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7408721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e380c7bc740e6418c72d27d7d4b787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlMode: 0
+  boidPrefab: {fileID: 676342791721572840, guid: f897bb6f1e1ca6e488704ea6543a2907, type: 3}
+  numBoidsToSpawn: 10
+--- !u!4 &7408722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +178,6 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
-  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -257,26 +303,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &330585548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2e380c7bc740e6418c72d27d7d4b787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boidPrefab: {fileID: 676342791721572840, guid: f897bb6f1e1ca6e488704ea6543a2907, type: 3}
-  foodPrefab: {fileID: 2851859587008556783, guid: 5540831f9bd2a0444bc7c46becba06b7, type: 3}
-  splashParticleSystem: {fileID: 1638789864}
-  boidsToSpawn: 6
-  seekStrength: 1
-  arriveRange: 0.2
-  interactionRange: 0.4
-  controlMode: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,11 +891,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b211b5ed880874b4fa61daa8fdf3ffe1, type: 3}
---- !u!198 &1638789864 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6176020698342423678, guid: b211b5ed880874b4fa61daa8fdf3ffe1, type: 3}
-  m_PrefabInstance: {fileID: 1638789863}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -879,3 +900,4 @@ SceneRoots:
   - {fileID: 1093903381}
   - {fileID: 939835165}
   - {fileID: 1638789863}
+  - {fileID: 7408722}

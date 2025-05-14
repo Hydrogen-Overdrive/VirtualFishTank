@@ -117,9 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afbf8b5cb66bc24e8bb8c8a48dc4196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMax: 1
-  accelMax: 0.8
-  currentAcceleration: {x: 0, y: 0, z: 0}
   rigidBody: {fileID: 0}
 --- !u!54 &4704192958434421656
 Rigidbody:
